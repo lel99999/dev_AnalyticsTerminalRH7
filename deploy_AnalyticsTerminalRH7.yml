@@ -3,6 +3,42 @@
   become: yes
   become_method: sudo
 
+  vars:
+    custom_repo: true
+    deploy_iptables: true
+    envir: prod
+# vars_files:
+#   - ~/RHACCOUNT
+  become: yes
+  become_method: sudo
+
+  pre_tasks:
+    - name: register RHEL7 repo
+      command: "/usr/bin/subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-optional-rpms"
+    - name: register RHEL7 RHSCL Repo
+      shell: "/usr/bin/subscription-manager repos --enable=rhel-server-rhscl-7-rpms"
+    - name: register RHEL7 DevTools
+      shell: "/usr/bin/subscription-manager repos --enable=rhel-7-server-devtools-rpms"
+    - name: list RHEL enabled repos
+      shell: "/usr/bin/subscription-manager repos --list-enabled"
+      register: enabled_repos
+    - debug:
+        msg: "RHEL Enabled Repos: {{ enabled_repos }}"
+  tasks:
+#   - name: Install X Windows
+#     yum:
+#       name: "@X Window System"
+#       state: present
+
+    - name: Install Development Tools
+#     shell:  yum groupinstall "Development Tools" -y
+      yum:
+        name: "@Development tools"
+        state: present
+
+#   - name: Install JAVA OpenJDK 1.8
+#     shell: yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y
+
   roles:
     - {role: puppet_disable, when: "disable_puppet"}
     - {role: iptables, when: "iptables_config"}
