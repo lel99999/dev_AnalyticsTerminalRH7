@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "analyticsterminalRH7" do |analyticsterminalRH7|
     analyticsterminalRH7.vm.box = "clouddood/RH7.5_baserepo"
-    analyticsterminalRH7.vm.hostname = "pythonRH7"
+    analyticsterminalRH7.vm.hostname = "analyticsterminalRH7"
     analyticsterminalRH7.vm.network "private_network", ip: "192.168.60.148"
     analyticsterminalRH7.vm.provision "shell", :inline => "sudo echo '192.168.60.148 analyticsterminalRH7.local analyticsterminalRH7' >> /etc/hosts"
 
