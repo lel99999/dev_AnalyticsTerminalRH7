@@ -25,10 +25,9 @@ Development of Analytics Terminal for RHEL 7
 - r-studio-server-configRH7
 - r-studio-serverRH7
 - r_RH7
-- redis
+- redis2 -> redis5
 - ruby
 - shared7
-- spark -> 3
-- sublime -> sublime3
+- spark2 -> spark3
+- sublime2 -> sublime3
 - stattransfer14
-- sublime  ## Add version
