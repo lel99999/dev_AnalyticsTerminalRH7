@@ -28,6 +28,7 @@ Development of Analytics Terminal for RHEL 7
 - redis
 - ruby
 - shared7
-- spark
+- spark -> 3
+- sublime -> sublime3
 - stattransfer14
 - sublime  ## Add version
