@@ -1,5 +1,5 @@
 # main.yml
 ---
 dependencies:
-- role: shared
-- role: epel
+- role: shared7
+- role: epel7
