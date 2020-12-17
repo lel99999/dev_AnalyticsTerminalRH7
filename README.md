@@ -11,7 +11,7 @@ Development of Analytics Terminal for RHEL 7
 - jdk -> openjdk1.8
 - maven
 - nginx
-- nodejs
+- nodejs -> v8, v10 via SCL 
 - odbc -> odbc7
 - postgresql-client -> postgresql-client7
 - pycharm
