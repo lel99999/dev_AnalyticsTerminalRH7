@@ -1,5 +1,6 @@
 ---
-- hosts: analytics_terminal
+- hosts: analyticsterminalRH7
+  #- hosts: analytics_terminal
   become: yes
   become_method: sudo
 
