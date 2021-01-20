@@ -27,7 +27,8 @@
 #     - spark
       - spark3
       - sublime
-      - nodejs
+#     - nodejs
+      - nodejs10
       - redis
       - maven
       - intellij
