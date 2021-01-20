@@ -19,11 +19,13 @@
       - ruby
 #     - jdk
       - openjdk1.8
-      - pycharm
+      - pycharmRH7
+#     - pycharm
 #     - postgresql-client
       - postgresql-client7
-      - nginx
-      - spark
+      - nginxRH7
+#     - spark
+      - spark3
       - sublime
       - nodejs
       - redis

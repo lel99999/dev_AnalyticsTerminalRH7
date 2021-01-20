@@ -4,13 +4,16 @@
   become_method: sudo
 
   roles:
-      - {role: epel, when: "use_epel and not 'production' in group_names"}
-      - {role: python, when: "install_python and custom_repo"}
-      - {role: python-build, when: "not custom_repo"}
-      - {role: python3, when: "install_python and custom_repo"}
-      - {role: python3-build, when: "not custom_repo"}
-      - devtools
-      - devtools6
+#     - {role: epel, when: "use_epel and not 'production' in group_names"}
+#     - {role: python, when: "install_python and custom_repo"}
+#     - {role: python-build, when: "not custom_repo"}
+#     - {role: python3, when: "install_python and custom_repo"}
+#     - {role: python3-build, when: "not custom_repo"}
+      - epel7
+#     - devtools
+#     - devtools6
+      - devtools7
+      - python3RH7
       - ruby
       - jdk
       - pycharm
