@@ -5,12 +5,15 @@
 
 #- include_tasks: rhel7.yml
   #  when: (ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux') and ansible_distribution_version == 7
+
 - name: restart postgres
   become: True
-  systemd:
-    name: "{{ pp_servicename }}"
-    state: restarted
-    daemon_reload: yes
+  shell: systemctl restart postgresql
+# systemd:
+#   name: "{{ pp_servicename }}"
+#   name: "{{ pp_servicename }}"
+#   state: restarted
+#   daemon_reload: yes
 
 - name: restart iptables
   service:
