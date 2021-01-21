@@ -1171,16 +1171,26 @@ python_packages:
 #======================#
 ### PACKAGE SETTINGS ###
 #======================#
-postgres_install_dir: /usr/pgsql-9.4
+# Updated for Postgresql 10.x
+postgres_install_dir: /usr/pgsql-10
+#postgres_install_dir: /usr/pgsql-9.4
 postgres_packages:
-  - geos
-  - postgresql94
-  - postgresql94-devel
-  - postgresql94-libs
-  - postgresql94-odbc
-  - postgis2_94-devel
-  - postgis2_94-utils
+# - geos
+  - geos39
+  - geos39-devel
+# - postgresql94
+# - postgresql94-devel
+# - postgresql94-libs
+# - postgresql94-odbc
+# - postgis2_94-devel
+# - postgis2_94-utils
+  - postgis30_10
+  - postgis30_10-devel
+  - postgis30_10-client
+  - postgis30_10-gui
+  - postgis30_10-utils
   - pgadmin3
+  - pgadmin4
 
 #pentaho_zip_path: /artifacts
 #pentaho_zip_file: pdi-ce-5.4.0.1-130.zip
