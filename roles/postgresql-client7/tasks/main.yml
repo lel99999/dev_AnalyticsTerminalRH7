@@ -147,6 +147,7 @@
     src: "{{ postgres_install_dir }}/lib"
     dest: /usr/lib/pgsql
     state: link
+    force: yes
   tags:
     - postgres_client
   when: lpgsqllib.stat.exists == false
