@@ -107,7 +107,7 @@
 # tags:
 #   - ruby
 
-- name: Install RHEL 7.x ruby rpm
+- name: Install ruby RHEL 7.x rpm
   yum:
     name: "{{ item }}"
     state: present
