@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
     v.memory = "1024"
     v.cpus = 2
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
+    v.customize ["modifyvm", :id, "--audio", "none"]
   end
 # config.trigger.after :up do |trigger|
 #   run "subscription-manager register --username <username> --password <password> --auto-attach
