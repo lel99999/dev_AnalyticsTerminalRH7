@@ -94,7 +94,8 @@ iptables_config: True
 deploy_iptables: True
 
 # Allow custom iptables chain to be used, if needed
-iptables_chain: TEST-INPUT
+#iptables_chain: TEST-INPUT
+iptables_chain: IN_public_allow
 
 # This list of dictonaries defines global IP tables rules
 iptables_standard:
