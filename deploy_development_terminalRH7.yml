@@ -27,7 +27,8 @@
       - nginxRH7
 #     - spark
       - spark3
-      - sublime
+#     - sublime
+      - sublime3
 #     - nodejs
       - nodejs10
       - redis
