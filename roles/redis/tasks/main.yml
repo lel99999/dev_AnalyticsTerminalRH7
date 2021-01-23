@@ -11,7 +11,9 @@
   tags:
     - redis
 
-- name: Install the Redis package
+- name: Install the Redis package  ### from EPEL
+  become: yes
+  become_method: sudo
   yum:
    name: redis
    state: present
