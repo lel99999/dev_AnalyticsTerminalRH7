@@ -15,7 +15,8 @@
 #    - clouseau_thin
 
 - name: Install clouseau
-  pip:
-    executable: /usr/local/bin/pip2.7
-    name: /opt/clouseau
-  when: install_python
+  shell: python /opt/clouseau/setup.py install --install-dir
+# pip:
+#   executable: /usr/local/bin/pip2.7
+#   name: /opt/clouseau
+# when: install_python
