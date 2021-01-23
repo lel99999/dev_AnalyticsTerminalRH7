@@ -23,7 +23,8 @@ Vagrant.configure("2") do |config|
     analyticsterminalRH7.vm.provision "main", type: "ansible" do |ansible|
 #     ansible.playbook = "deploy_AnalyticsTerminalRH7.yml"
 #     ansible.playbook = "deploy_AnalyticsTerminalTest.yml"
-      ansible.playbook = "deploy_AnalyticsTerminalRH7_LOCAL.yml"
+#     ansible.playbook = "deploy_AnalyticsTerminalRH7_LOCAL.yml"
+      ansible.playbook = "deploy_AnalyticsTerminalRH7_TEST.yml"
       ansible.inventory_path = "vagrant_hosts"
       #ansible.tags = ansible_tags
       #ansible.verbose = ansible_verbosity
