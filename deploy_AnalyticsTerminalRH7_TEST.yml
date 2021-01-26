@@ -73,9 +73,9 @@
 ##   - sublime3
 #    - nodejs
 ##   - nodejs10
-     - redis
-     - maven
-     - intellij
+##   - redis
+#    - maven
+#    - intellij
      - clouseau
 #    - odbc
      - odbc7
