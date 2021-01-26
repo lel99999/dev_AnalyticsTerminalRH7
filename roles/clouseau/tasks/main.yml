@@ -15,7 +15,11 @@
 #    - clouseau_thin
 
 - name: Install clouseau
-  shell: python /opt/clouseau/setup.py install --install-dir
+# become: yes
+# become_method: sudo
+  shell: | 
+      scl enable rh-python36 bash
+      sudo python /opt/clouseau/setup.py install --install-dir
 # pip:
 #   executable: /usr/local/bin/pip2.7
 #   name: /opt/clouseau
