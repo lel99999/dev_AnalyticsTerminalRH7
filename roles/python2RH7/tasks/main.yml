@@ -28,7 +28,9 @@
 #    state: present
 - name: SCL Enable Pip Install Upgrade Pip 
   shell: |
-    scl enable python27 -- pip install --upgrade pip
+    scl enable python27 bash 
+    pip install --upgrade pip
+#   scl enable python27 -- pip install --upgrade pip
   become: yes
   become_method: sudo
 
