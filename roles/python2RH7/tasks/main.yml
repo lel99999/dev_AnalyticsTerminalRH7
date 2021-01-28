@@ -28,10 +28,13 @@
 #    state: present
 
 - name: Get pip
-  get_url:
-    url: https://bootstrap.pypa.io/get-pip.py
-    dest: /tmp/get-pip.py
-    mode: '0755'
+  shell: curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py --insecure
+
+##  Validate certificate error encountered 
+#  get_url:
+#   url: https://bootstrap.pypa.io/get-pip.py
+#   dest: /tmp/get-pip.py
+#   mode: '0755'
 
 - name: Install pip
   shell: python /tmp/get-pip.py
