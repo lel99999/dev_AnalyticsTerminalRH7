@@ -31,3 +31,6 @@ Development of Analytics Terminal for RHEL 7
 - spark2 -> spark3
 - sublime2 -> sublime3
 - stattransfer14
+
+#### Ansible SSH Connection Error
+Add following in /etc/ansible/hosts <ip> <hostname> ansible_ssh_pass=vagrant ansible_ssh_user=vagrant  <br/>
