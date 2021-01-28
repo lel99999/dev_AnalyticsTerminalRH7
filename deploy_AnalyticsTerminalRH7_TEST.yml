@@ -4,6 +4,9 @@
   become: yes
   become_method: sudo
 
+# Address errors with get_url using https where certificate validation causes error
+  environment:
+    GIT_SSL_NO_VERIFY: 'true'
   vars:
     custom_repo: true
     deploy_iptables: true
