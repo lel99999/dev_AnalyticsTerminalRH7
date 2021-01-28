@@ -1,6 +1,6 @@
 # main.yml - Install Python 2.7 and Packages from RedHat Satellite
 ---
-- name: Add RHLEL 7 SCL repo
+- name: Add RHEL 7 SCL repo
   shell: subscription-manager repos --enable=rhel-server-rhscl-7-rpms
  
 - name: Install Python27 packages
@@ -26,11 +26,21 @@
 #  pip:
 #    name: virtualenvwrapper
 #    state: present
+
+- name: Get pip
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: /tmp/get-pip.py
+    mode: '0755'
+
+- name: Install pip
+  shell: python /tmp/get-pip.py
+
 - name: SCL Enable Pip Install Upgrade Pip 
   shell: |
-    scl enable python27 bash 
-    pip install --upgrade pip
-#   scl enable python27 -- pip install --upgrade pip
+    scl enable python27 -- pip install --upgrade pip
+#   scl enable python27 bash 
+#   pip install --upgrade pip
   become: yes
   become_method: sudo
 
