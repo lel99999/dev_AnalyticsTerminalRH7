@@ -45,7 +45,7 @@
 - include: deploy_r_terminalRH7.yml
 #- include: deploy_r_terminal.yml
 
-- hosts: analytics_terminal
+- hosts: analytics_terminal7
   become: yes
   become_method: sudo
   roles:
