@@ -6,8 +6,8 @@
     disable_gpg_check: yes
   with_items: "{{ python_dep_packages }}"
   tags:
-    - python-libs
-    - python2-libs
+#   - python-libs
+#   - python2-libs
     - python3-libs
 
 - name: Uninstall pycurl
