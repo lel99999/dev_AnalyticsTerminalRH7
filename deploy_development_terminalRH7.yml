@@ -6,25 +6,25 @@
 
   roles:
 #     - {role: epel, when: "use_epel and not 'production' in group_names"}
-      - {role: epel7, when: "use_epel and not 'production' in group_names"}
-      - {role: pyenvRH7, when: "install_python and custom_repo"}
+##    - {role: epel7, when: "use_epel and not 'production' in group_names"}
+##    - {role: pyenvRH7, when: "install_python and custom_repo"}
 ##    - {role: python2RH7, when: "install_python and custom_repo"}
-      - {role: python3RH7, when: "install_python and custom_repo"}
+##    - {role: python3RH7, when: "install_python and custom_repo"}
 #     - {role: python, when: "install_python and custom_repo"}
 #     - {role: python-build, when: "not custom_repo"}
 #     - {role: python3, when: "install_python and custom_repo"}
 #     - {role: python3-build, when: "not custom_repo"}
 #     - devtools
 #     - devtools6
-      - devtools7
+##    - devtools7
 ##    - ruby
 #     - jdk
-      - openjdk1.8
-      - pycharmRH7
+##    - openjdk1.8
+##    - pycharmRH7
 #     - pycharm
 #     - postgresql-client
-      - postgresql-client7
-      - nginxRH7
+##    - postgresql-client7
+###   - nginxRH7
 #     - spark
       - spark3
 #     - sublime
