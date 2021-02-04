@@ -53,10 +53,10 @@
   tags:
   - intellij
 
-- name: Set up idea.png
-  template:
-    src: idea.png.j2
-    dest: "{{ intellij_main_dir }}/bin"
+#- name: Set up idea.png
+#  template:
+#    src: idea.png.j2
+#    dest: "{{ intellij_main_dir }}/bin"
   # when: not custom_repo
-  tags:
-  - intellij
+#  tags:
+#  - intellij

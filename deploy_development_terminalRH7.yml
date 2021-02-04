@@ -26,13 +26,13 @@
 ##    - postgresql-client7
 ###   - nginxRH7
 #     - spark
-      - spark3
+###   - spark3
 #     - sublime
-      - sublime3
+###   - sublime3
 #     - nodejs
-      - nodejs10
-      - redis
-      - maven
+###   - nodejs10
+###   - redis
+###   - maven
       - intellij
       - clouseau
 #     - odbc
