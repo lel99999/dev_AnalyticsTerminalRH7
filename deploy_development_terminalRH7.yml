@@ -8,8 +8,8 @@
 #     - {role: epel, when: "use_epel and not 'production' in group_names"}
       - {role: epel7, when: "use_epel and not 'production' in group_names"}
       - {role: pyenvRH7, when: "install_python and custom_repo"}
-#     - {role: python2RH7, when: "install_python and custom_repo"}
-      - {role: python3RH7, when: "install_python and custom_repo"}
+##    - {role: python2RH7, when: "install_python and custom_repo"}
+##    - {role: python3RH7, when: "install_python and custom_repo"}
 #     - {role: python, when: "install_python and custom_repo"}
 #     - {role: python-build, when: "not custom_repo"}
 #     - {role: python3, when: "install_python and custom_repo"}
