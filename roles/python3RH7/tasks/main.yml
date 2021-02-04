@@ -1,5 +1,11 @@
 # main.yml - Install Python 3.6 from RedHat Satellite
 ---
+- name: Clean postgres9.4 repo to fix Error
+  yum_repository:
+    name: Postgres9.4
+    baseurl: https://download.postgresql.org/pub/repos/yum/9.4/redhat/rhel-7-x86_64/
+    state: absent
+
 - name: Install Python36 packages
   yum:
     name: "{{ item }}"
