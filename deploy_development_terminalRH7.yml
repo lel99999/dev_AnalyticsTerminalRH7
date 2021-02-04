@@ -17,7 +17,7 @@
 #     - devtools
 #     - devtools6
       - devtools7
-      - ruby
+##    - ruby
 #     - jdk
       - openjdk1.8
       - pycharmRH7
