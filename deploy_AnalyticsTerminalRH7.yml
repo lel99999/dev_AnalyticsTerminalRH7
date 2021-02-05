@@ -42,8 +42,7 @@
 #    - {role: common, when: "install_glusterfs"}
 
 - include: deploy_development_terminalRH7.yml
-- include: deploy_r_terminalRH7.yml
-#- include: deploy_r_terminal.yml
+#- include: deploy_r_terminalRH7.yml
 
 - hosts: analytics_terminal7
   become: yes

@@ -37,7 +37,7 @@
 ##    - clouseau
 #     - odbc
       - odbc7
-      - python-libs
+###   - python-libs
       # - julia
 
 # Install development packages
