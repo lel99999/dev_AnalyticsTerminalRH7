@@ -1,6 +1,7 @@
 ---
-- hosts: analyticsterminalRH7
-  #- hosts: analytics_terminal
+- hosts: research_environment 
+#- hosts: analyticsterminalRH7
+#- hosts: analytics_terminal
   become: yes
   become_method: sudo
   roles:
