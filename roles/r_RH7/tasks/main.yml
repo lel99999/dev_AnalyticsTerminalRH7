@@ -65,18 +65,23 @@
 #- debug:
 #    msg: "R dependencies {{ r_dependencies }}"
 
+- name: Enable local epel repo
+  shell: "/usr/bin/subscription-manager repos --enable=cfpb_gov_epel-rhel7_r-epel-rhel-7-x86-64"
+
 - name: Install new packages required by R
   yum:
     name: "{{ item }}"
     state: present
+    disable_gpg_check: yes
   with_items:
     - libRmath-devel
 
-- name: Ensure epel7 latest is installed
-  yum:
-    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    state: present
-    disable_gpg_check: yes
+# fixed by line#68
+#- name: Ensure epel7 latest is installed
+#  yum:
+#    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+#    state: present
+#    disable_gpg_check: yes
     
 - name: Ensure RHEL7 repos enabled
   command: "/usr/bin/subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-optional-rpms"
