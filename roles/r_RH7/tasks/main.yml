@@ -250,6 +250,11 @@
     - r
   when: install_r_packages and do_r_install_w_opts
 
+- name: Fix libcurl error
+  yum:
+    name: libcurl-devel
+    state: present
+   
 - name: Install R packages from Github
   vars:
     do_r_install_github: True
