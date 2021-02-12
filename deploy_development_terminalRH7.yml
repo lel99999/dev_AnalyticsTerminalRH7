@@ -39,11 +39,26 @@
       - odbc7
 ###   - python-libs
       # - julia
+#   - epel7
+    - common7
+    - eod7
 
 # Install development packages
 - hosts: analytics_terminal
   become: yes
   tasks:
+    - name: install libselinux-python
+      yum:
+        name: libselinux-python
+        state: present
+    - name: Install bash autocomplete
+      yum:
+        name:
+          - bash-completion
+          - bash-completion-extras
+        state: present
+#     shell: yum install -y bash-completion bash-completion-extras
+
     - name: Install development packages
       yum:
         name: "{{ item }}"
