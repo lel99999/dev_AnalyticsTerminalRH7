@@ -36,3 +36,6 @@ Development of Analytics Terminal for RHEL 7
 Add following in /etc/ansible/hosts <ip> <hostname> ansible_ssh_pass=vagrant ansible_ssh_user=vagrant  <br/>
 
 #### Remove Postgres 9.4 REPO Error, No longer Exists/Supported
+
+#### Python Pip for RHEL 7
+[https://access.redhat.com/solutions/1519803](https://access.redhat.com/solutions/1519803) <br/>
