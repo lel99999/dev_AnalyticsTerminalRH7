@@ -21,9 +21,9 @@ Development of Analytics Terminal for RHEL 7
 - python3RH7
 - r-shiny-configRH7
 - r-shinyRH7
-- r-studio-desktopRH7
+- r-studio-desktopRH7 -> v1.14.1106
 - r-studio-server-configRH7
-- r-studio-serverRH7
+- r-studio-serverRH7 -> v.1.14.1106
 - r_RH7
 - redis2 -> redis5
 - ruby
