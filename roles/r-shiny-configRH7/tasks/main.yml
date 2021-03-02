@@ -19,7 +19,8 @@
     - restart shiny-server
 
 - name: Shiny Server Service Fix - Copy
-  ansible.builtin.copy:
+# ansible.builtin.copy:
+  copy:
     src: /opt/shiny-server/config/systemd/shiny-server.service
     dest: /etc/systemd/system/shiny-server.service
 
