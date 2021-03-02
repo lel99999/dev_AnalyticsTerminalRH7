@@ -23,6 +23,7 @@
   copy:
     src: /opt/shiny-server/config/systemd/shiny-server.service
     dest: /etc/systemd/system/shiny-server.service
+    remote_src: yes
 
 - name: Shiny Server Service Fix - Symlink
 # ansible.builtin.file:
@@ -30,6 +31,7 @@
     src: /etc/systemd/system/shiny-server.service
     dest: /etc/systemd/system/multi-user.target.wants/shiny-server.service
     state: link
+    remote_src: yes
 
 - name: Ensure Shiny Server is started
   shell: "systemctl start shiny-server"
