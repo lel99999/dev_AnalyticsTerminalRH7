@@ -18,12 +18,12 @@
   notify:
     - restart shiny-server
 
-- name: Shiny Server Service Fix (Copy)
+- name: Shiny Server Service Fix - Copy
   ansible.builtin.copy:
     src: /opt/shiny-server/config/systemd/shiny-server.service
     dest: /etc/systemd/system/shiny-server.service
 
-- name: Shiny Server Service Fix (Symlink)
+- name: Shiny Server Service Fix - Symlink
   ansible.builtin.file:
     src: /etc/systemd/system/shiny-server.service
     dest: /etc/systemd/system/multi-user.target.wants/shiny-server.service
