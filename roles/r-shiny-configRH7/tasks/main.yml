@@ -18,10 +18,10 @@
   notify:
     - restart shiny-server
 
-##- name: Ensure Shiny Server is started
-##  shell: "systemctl start shiny-server"
+- name: Ensure Shiny Server is started
+  shell: "systemctl start shiny-server"
 # shell: "start shiny-server"
-##  register: shiny_result
-##  failed_when: shiny_result.rc != 0 and "already running" not in shiny_result.stderr
-##  tags:
-##    - shiny
+  register: shiny_result
+  failed_when: shiny_result.rc != 0 and "already running" not in shiny_result.stderr
+  tags:
+    - shiny
