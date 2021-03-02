@@ -39,3 +39,7 @@ Add following in /etc/ansible/hosts <ip> <hostname> ansible_ssh_pass=vagrant ans
 
 #### Python Pip for RHEL 7
 [https://access.redhat.com/solutions/1519803](https://access.redhat.com/solutions/1519803) <br/>
+
+#### Shiny Server Issues
+- [Shiny Server Service Issue](https://github.com/rstudio/shiny-server/issues/316)
+
