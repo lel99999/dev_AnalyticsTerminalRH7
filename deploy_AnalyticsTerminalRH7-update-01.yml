@@ -6,6 +6,7 @@
   vars:
     custom_repo: true
     deploy_iptables: true
+    install_r_packages: true
     envir: prod
 # vars_files:
 #   - ~/RHACCOUNT

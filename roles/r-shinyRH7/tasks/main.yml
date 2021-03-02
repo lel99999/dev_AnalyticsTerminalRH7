@@ -4,6 +4,8 @@
   with_items:
     - shiny
     - rmarkdown
+    - devtools
+    - RJDBC
   tags:
     - shiny
   when: install_r_packages
