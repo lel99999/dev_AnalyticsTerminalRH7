@@ -20,10 +20,10 @@
   tags:
     - rstudio-server
 
-- name: Remove R Studio Server
-  yum:
-    name: "{{ rstudio_server_package_name }}"
-    state: absent
+#- name: Remove R Studio Server
+#  yum:
+#    name: "{{ rstudio_server_package_name }}"
+#    state: absent
 
 - name: Install R Studio Server
   yum:
