@@ -22,8 +22,10 @@
 
 - name: Install R Studio Server
   yum:
-    name: "{{ rstudio_server_package_name }}"
-    state: "{{ rstudio_server_package_state }}"
+#   name: "{{ rstudio_server_package_name }}"
+    name: https://download2.rstudio.org/server/centos7/x86_64/rstudio-server-rhel-1.4.1106-x86_64.rpm
+#   state: "{{ rstudio_server_package_state }}"
+    state: present
     disable_gpg_check: yes
     validate_certs: no
   when: update_rstudio
