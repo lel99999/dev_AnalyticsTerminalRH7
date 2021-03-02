@@ -25,9 +25,11 @@
     dest: /etc/systemd/system/shiny-server.service
 
 - name: Shiny Server Service Fix - Symlink
-  ansible.builtin.file:
+# ansible.builtin.file:
+  file:
     src: /etc/systemd/system/shiny-server.service
     dest: /etc/systemd/system/multi-user.target.wants/shiny-server.service
+    state: link
 
 - name: Ensure Shiny Server is started
   shell: "systemctl start shiny-server"
