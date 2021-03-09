@@ -43,8 +43,15 @@ Add following in /etc/ansible/hosts <ip> <hostname> ansible_ssh_pass=vagrant ans
 #### Shiny Server Issues
 - [Shiny Server Service Issue](https://github.com/rstudio/shiny-server/issues/316)
 
-
 #### Launch RStudio
 ```
 $ssh -Y <host> QMLSCENE_DEVICE=software rstudio
 ```
+
+#### Modified/Removed Packages
+- Postgresql 9.x
+- Postgis24-9x
+
+#### Updated/Added Packages
+- Postgis25-10*
+- Python27 System Role
