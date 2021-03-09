@@ -389,7 +389,7 @@ r_dependencies:
   - mysql
   - mysql-devel
   - mysql-connector-odbc
-  - postgresql-odbc
+# - postgresql-odbc
   - unixODBC
   - unixODBC-devel
   - freetds
