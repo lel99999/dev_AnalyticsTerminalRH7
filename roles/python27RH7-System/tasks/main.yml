@@ -43,11 +43,12 @@
 #  become: yes
 #  become_method: sudo
 
-- name: System Pip Install numpy, scipy
-  pip: 
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - numpy
-    - scipy
-    - virtualenvwrapper
+########### Cannot install numpy, scipy as Python >= v3.7 is required
+#- name: System Pip Install numpy, scipy
+#  pip: 
+#    name: "{{ item }}"
+#    state: present
+#  with_items:
+#    - numpy
+#    - scipy
+#    - virtualenvwrapper
