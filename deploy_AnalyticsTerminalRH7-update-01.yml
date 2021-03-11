@@ -1,5 +1,6 @@
 ---
-- hosts: research_environment
+#- hosts: research_environment
+- hosts: analytics_terminal7
   become: yes
   become_method: sudo
 
@@ -38,7 +39,7 @@
 #   - name: Install JAVA OpenJDK 1.8
 #     shell: yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y
 
-  roles:
+# roles:
 #   - {role: puppet_disable, when: "disable_puppet"}
 #   - {role: iptables, when: "iptables_config"}
 #    - {role: common, when: "install_glusterfs"}
@@ -46,9 +47,10 @@
 #- include: deploy_development_terminalRH7.yml
 #- include: deploy_r_terminalRH7.yml
 
-- hosts: analytics_terminal7
-  become: yes
-  become_method: sudo
+#- hosts: analytics_terminal7
+#- hosts: research_environment
+#  become: yes
+#  become_method: sudo
   roles:
 #   - {role: eod, when: "install_desktop"}
 #   - {role: log-courier, when: "install_logstash"}
@@ -60,8 +62,8 @@
 ##  - r-studio-desktopRH7
 ##  - eod7
     - odbc7
-### - python27RH7-System
-### - postgresql-client7
+    - python27RH7-System
+    - postgresql-client7
 
   post_tasks:
     - name: Open port range for app prototyping
