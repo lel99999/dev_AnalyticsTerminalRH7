@@ -30,11 +30,11 @@
 #  pip:
 #    name: virtualenvwrapper
 #    state: present
-- name: SCL Enable Pip Install Upgrade Pip 
-  shell: |
-    scl enable python27 -- pip install --upgrade pip
-  become: yes
-  become_method: sudo
+#- name: SCL Enable Pip Install Upgrade Pip 
+#  shell: |
+#    scl enable python27 -- pip install --upgrade pip
+#  become: yes
+#  become_method: sudo
 
 # Already Installed with RHEL 7
 #- name: SCL Enable Pip Install virtualenvwrapper
@@ -43,13 +43,11 @@
 #  become: yes
 #  become_method: sudo
 
-- name: SCL Enable Pip Install numpy, scipy
-  shell: |
-    scl enable python27 -- pip install numpy scipy 
-  become: yes
-  become_method: sudo
-
-#- name: Install pip
-#  easy_install:
-#    name: pip
-#    executable: easy_install-3.6
+- name: System Pip Install numpy, scipy
+  pip: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - numpy
+    - scipy
+    - virtualenvwrapper
