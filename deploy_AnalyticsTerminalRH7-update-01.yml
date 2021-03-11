@@ -12,8 +12,6 @@
     envir: prod
 # vars_files:
 #   - ~/RHACCOUNT
-  become: yes
-  become_method: sudo
 
   pre_tasks:
     - name: register RHEL7 repo
@@ -107,6 +105,8 @@
       yum:
         name: libcurl-devel
         state: present
+    # tags:
+    #   - r
     
     - name: Install R packages from Github
     # vars:

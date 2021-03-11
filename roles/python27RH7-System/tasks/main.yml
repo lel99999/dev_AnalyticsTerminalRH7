@@ -11,7 +11,7 @@
     - python-virtualenv
     - python-virtualenvwrapper
     - python-virtualenv-api
-    - python-virutalenv-clone
+#   - python-virutalenv-clone
 ##
 #   - python27-PyYAML
 #   - python27-python-setuptools
