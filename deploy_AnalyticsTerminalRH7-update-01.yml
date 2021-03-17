@@ -123,7 +123,8 @@
       pip:
         name: "{{ python_dep_packages }}"
         state: present
-        executable: "{{ python_pip_bin }}"
+        executable: /opt/rh/python27/root/usr/bin/pip
+#       executable: "{{ python_pip_bin }}"
     # when: install_python
       tags:
         - python-libs
@@ -131,8 +132,9 @@
     - name: Install Python packages for 27
       pip:
         name: "{{ python_packages }}"
-        state: "{{ python_package_mode }}"
-        executable: "{{ python_pip_bin }}"
+        state: present
+        executable: /opt/rh/python27/root/usr/bin/pip
+#       executable: "{{ python_pip_bin }}"
     # when: install_python
       tags:
         - python-libs
@@ -141,8 +143,9 @@
     - name: Install Python packages for 35
       pip:
         name: "{{ python3_packages }}"
-        state: "{{ python_package_mode }}"
-        executable: "{{ python3_pip_bin }}"
+        state: present
+        executable: /usr/bin/pip3
+#       executable: "{{ python3_pip_bin }}"
     # when: install_python
       tags:
         - python-libs
