@@ -75,18 +75,33 @@
 
 ##########################################################  R-Package Updates ##############################################################
 
-    - name: Install R packages
-    # vars:
-    #   do_r_install_packages: False
+    - name: Install R packages 1
       command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
       with_items: "{{ r_packages }}"
       register: r_result
       failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
       changed_when: "'Added' in r_result.stdout"
-    # environment: "{{ r_env_vars }}"
-    # tags:
-    #   - r
-    # when: install_r_packages and do_r_install_packages
+    
+    - name: Install R packages 2
+      command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
+      with_items: "{{ r_packages2 }}"
+      register: r_result
+      failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
+      changed_when: "'Added' in r_result.stdout"
+    
+    - name: Install R packages 3
+      command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
+      with_items: "{{ r_packages3 }}"
+      register: r_result
+      failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
+      changed_when: "'Added' in r_result.stdout"
+    
+    - name: Install R packages 4
+      command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
+      with_items: "{{ r_packages4 }}"
+      register: r_result
+      failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
+      changed_when: "'Added' in r_result.stdout"
     
     - name: Install R packages with opts
     # vars:
