@@ -1137,7 +1137,8 @@ python_packages:
   #- setools # RPMs
   #- SimpleDialog # tkinter
   - slip
-  - pysmbc
+  - pysmbclient 
+  #- pysmbc # replaced by pysmbclient
   #- snack # tkinter
   #- sos # RPM
   #- sqlitecachec # sqlite3
@@ -1145,7 +1146,8 @@ python_packages:
   #- system_config_keyboard # Anaconda?
   - svn
   #- talloc
-  - test
+  - pip-install-test
+  #- test # replaced by pip-install-test
   - theano
   - timing
   #- tkColorChooser # tkinter
