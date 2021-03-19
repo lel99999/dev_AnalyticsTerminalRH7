@@ -9,7 +9,9 @@
 #done;
 
 #python_packages
-for j in `cat /tmp/pypkgs.txt`
+#for j in `cat /tmp/pypkgs.txt`
+for j in Cython abrt acutil atk audit auparse beaker bonobo cairocffi Canvas cas cracklib pycrypto pycups pycurl dateutils pydbus decorator dmidecode egg email python-ldap flock folium pkgconfig gdal gdbm iniparse ipython xmpppy jinja2 kerberos logging lxml orca ORBit paramiko pydocs pygst_utils py-notify pyodbc pysolr pytz pyzmq readline python-space pyinsane numpy scipy scikit-learn setools slip pysmbc svn test theano timing tornado vincent wsgiref pyaml cookiecutter luigi ansible statsmodels keras
+
 do
 # echo $j
   sudo pip install $i
