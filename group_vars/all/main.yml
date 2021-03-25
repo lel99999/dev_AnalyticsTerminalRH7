@@ -994,11 +994,11 @@ python_dep_packages_mod:
   - python-ldap
   - python-sssdconfig
   - pywebkitgtk
-# - pyxf86config
+# - pyxf86config   # Not found 3/24
   - setools
   - setools-devel
   - setools-libs
-  - setools-libs-python
+# - setools-libs-python  # Not found 3/24
   - sos
   - sssd
   - subversion
