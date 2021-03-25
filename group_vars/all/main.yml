@@ -994,7 +994,7 @@ python_dep_packages:
   - python-ldap
   - python-sssdconfig
   - pywebkitgtk
-  - pyxf86config
+# - pyxf86config
   - setools
   - setools-devel
   - setools-libs
