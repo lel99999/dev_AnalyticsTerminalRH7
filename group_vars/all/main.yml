@@ -919,7 +919,7 @@ r_env_vars:
   CXX: /opt/rh/devtoolset-2/root/usr/bin/c++
   PATH: /opt/rh/devtoolset-2/root/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
 
-python_dep_packages:
+python_dep_packages.mod:
   - atlas
   - atlas-devel
   - bzip2
@@ -1097,9 +1097,9 @@ python_packages:
   #- libxml2-python #- libxml2mod
   - lxml
   - orca
-  #- meh
-  #- nss
-  #- OpenSSL
+  - meh
+  - nss
+  - OpenSSL
   - ORBit
   #- packagekit # RPM
   #- pango # GTK
