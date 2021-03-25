@@ -4,7 +4,7 @@
     name: "{{ item }}"
     state: present
     disable_gpg_check: yes
-  with_items: "{{ python_dep_packages.mod }}"
+  with_items: "{{ python_dep_packages_mod }}"
   tags:
 #   - python-libs
 #   - python2-libs

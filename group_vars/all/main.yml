@@ -919,7 +919,7 @@ r_env_vars:
   CXX: /opt/rh/devtoolset-2/root/usr/bin/c++
   PATH: /opt/rh/devtoolset-2/root/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
 
-python_dep_packages.mod:
+python_dep_packages_mod:
   - atlas
   - atlas-devel
   - bzip2
