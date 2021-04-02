@@ -14,9 +14,10 @@ for j in Cython abrt acutil atk audit auparse beaker bonobo cairocffi Canvas cas
 
 do
 # echo $j
-  sudo pip install $i
-#sudo pip3 install $i
+  sudo pip install $j
+#sudo pip3 install $j
 done
+
 Cython
 abrt
 acutil 
