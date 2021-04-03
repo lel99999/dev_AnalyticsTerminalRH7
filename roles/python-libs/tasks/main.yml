@@ -59,7 +59,8 @@
     - python-libs
     - python2-libs
 
-- name: Install Python packages for 35
+#- name: Install Python packages for 35
+- name: Install Python packages for 36
   pip:
     name: "{{ python3_packages }}"
     state: "{{ python_package_mode }}"
