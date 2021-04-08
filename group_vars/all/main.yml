@@ -814,102 +814,98 @@ r_packages_with_opts:
 
 r_packages_github:
   # - "http://cran.r-project.org/src/contrib/Archive/RQuantLib/RQuantLib_0.3.12.tar.gz" # The latest version requires QuantLib 1.4.0, which is not supported by Centos 6.5
-  -
-    name: rCharts
-    user: ramnathv
-  -
-    name: flexdashboard
-    user: rstudio
-  -
-    name: shinydashboard
-    user: rstudio
-  -
-    name: shinyjs
-    user: daattali
-  -
-    name: miniUI
-    user: rstudio
-  -
-    name: DT
-    user: rstudio
-  -
-    name: rticles
-    user: rstudio
-  -
-    name: pixiedust
-    user: nutterb
-  -
-    name: DiagrammeR
-    user: rich-iannone
-  -
-    name: shinythemes
-    user: rstudio
-  -
-    name: rbokeh
-    user: bokeh
-  -
-    name: highcharter
-    user: jbkunst
-  -
-    name: RSQLServer
-    user: imanuelcostigan
-  -
-    name: htmlwidgets
-    user: sparkline
-  -
-    name: streamgraph
-    user: hrbrmstr
-  -
-    name: rthreejs
-    user: bwlewis
-  -
-    user: IRkernel
-    name: IRkernel
-  -
-    user: IRkernel
-    name: IRdisplay
-  -
-    user: ropensci
-    name: elasticdsl
-  -
-    user: davidgohel
-    name: ggiraph
-  -
-    user: thomasp85
-    name: ggforce
-  -
-    user: thomasp85
-    name: ggraph
-  -
-    user: dgrtwo
-    name: gganimate
-  -
-    user: sachsmc
-    name: plotROC
-  -
-    user: bmschmidt
-    name: wordVectors
-  -
-    user: sailthru
-    name: tidyjson
-  -
-    user: rstudio
-    name: bookdown
-  -
-    user: drsimonj
-    name: twidlr
-  -
-    user: tidyverse
-    name: googledrive
-  -
-    user: rstudio
-    name: tensorflow
-  -
-    user: rstudio
-    name: blogdown
-  -
-    user: PMassicotte
-    name: gtrendsR
+  - name: rCharts
+    user: ramnathv
+
+  - name: flexdashboard
+    user: rstudio
+
+  - name: shinydashboard
+    user: rstudio
+
+  - name: shinyjs
+    user: daattali
+
+  - name: miniUI
+    user: rstudio
+
+  - name: DT
+    user: rstudio
+
+  - name: rticles
+    user: rstudio
+
+  - name: pixiedust
+    user: nutterb
+
+  - name: DiagrammeR
+    user: rich-iannone
+
+  - name: shinythemes
+    user: rstudio
+
+  - name: rbokeh
+    user: bokeh
+
+  - name: highcharter
+    user: jbkunst
+
+  - name: RSQLServer
+    user: imanuelcostigan
+
+  - name: htmlwidgets
+    user: sparkline
+
+  - name: streamgraph
+    user: hrbrmstr
+
+  - name: rthreejs
+    user: bwlewis
+
+  - name: IRkernel
+    user: IRkernel
+
+  - name: IRdisplay
+    user: IRkernel
+
+  - name: elasticdsl
+    user: ropensci
+
+  - name: ggiraph
+    user: davidgohel
+
+  - name: ggforce
+    user: thomasp85
+
+  - name: ggraph
+    user: thomasp85
+
+  - name: gganimate
+    user: dgrtwo
+
+  - name: plotROC
+    user: sachsmc
+
+  - name: wordVectors
+    user: bmschmidt
+
+  - name: tidyjson
+    user: sailthru
+
+  - name: bookdown
+    user: rstudio
+
+  - name: twidlr
+    user: drsimonj
+
+  - name: googledrive
+    user: tidyverse
+
+  - name: tensorflow
+    user: rstudio
+
+  - name: blogdown
+    user: rstudio
 
 r_env_vars:
   CPATH: /usr/include/glpk
@@ -919,6 +915,9 @@ r_env_vars:
   CXX: /opt/rh/devtoolset-2/root/usr/bin/c++
   PATH: /opt/rh/devtoolset-2/root/usr/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
 
+#======================#
+### Python Pacakges ###
+#======================#
 python_dep_packages_mod:
   - atlas
   - atlas-devel
@@ -1173,33 +1172,114 @@ python_packages:
   - statsmodels
   - keras
 
+python3_packages:
+  - Cython
+  - beaker
+  - cairocffi
+  - Canvas
+  - cracklib
+  - pycrypto #Crypto
+  - pycups # cups # cupsext # cupshelpers
+  - pycurl #curl
+  - dateutils
+  - pydbus
+  - decorator
+  #- dmidecode
+  - egg
+  #- email
+  #- python-ldap
+  - flock
+  - folium
+  - pkgconfig
+  - iniparse
+  - ipython
+  - xmpppy #- jabber
+  - jinja2
+  #- kerberos
+  #- logging
+  - lxml
+  - orca
+  - ORBit
+  - paramiko
+  - pydocs #_topics
+  #- pygst_utils
+  #- py-notify
+  - pyodbc
+  - pysolr
+  - pytz
+  - pyzmq
+  - readline
+  - python-space
+  - pyinsane #- scanext
+  - numpy
+  - scipy
+  - scikit-learn
+  - slip
+  # TODO: Verify if needed
+  # - pysmbc
+  - svn
+  # TODO: Figure out what this is?
+  #- test
+  - theano
+  #- timing
+  - tornado
+  - vincent
+  #- wsgiref
+  - pyaml
+  - cookiecutter
+  - luigi
+  - statsmodels
+  - keras
+
 #======================#
 ### PACKAGE SETTINGS ###
 #======================#
-# Updated for Postgresql 10.x
 postgres_install_dir: /usr/pgsql-10
-#postgres_install_dir: /usr/pgsql-9.4
+postgres_install_repository: True
 postgres_packages:
-# - geos
-  - geos39
-  - geos39-devel
-# - postgresql94
-# - postgresql94-devel
-# - postgresql94-libs
-# - postgresql94-odbc
-# - postgis2_94-devel
-# - postgis2_94-utils
-  - postgis30_10
-  - postgis30_10-devel
-  - postgis30_10-client
-  - postgis30_10-gui
-  - postgis30_10-utils
-  - pgadmin3
-  - pgadmin4
+  - postgresql10
+  - postgresql10-devel
+  - postgresql10-libs
+  - postgresql10-odbc
 
-#pentaho_zip_path: /artifacts
-#pentaho_zip_file: pdi-ce-5.4.0.1-130.zip
+postgres_gis_packages:
+  - geos36
+  - postgis24_10
+  - postgis24_10-devel
+  - postgis24_10-utils
+  - postgis24_10-client
+ 
+postgres_old_packages:
+  - postgresql96
+  - postgresql96-libs
+  - postgresql96-devel
+  - postgresql96-contrib
+  - postgresql96-odbc
+  - postgresql96-jdbc
+  - postgresql94
+  - postgresql94-libs
+  - postgresql94-devel
+  - postgresql94-contrib
+  - postgresql94-odbc
+  - postgresql94-jdbc
+  - postgis22
+  - postgis23_95
+  - postgis23_95-devel
+  - postgis23_95-utils
+  - postgis23_95-client
+  - postgis24_96
+  - postgis24_96-devel
+  - postgis24_96-utils
+  - postgis24_96-client
+  - pgdg-redhat96
+  - pgdg-redhat95
+  - pgdg-redhat94
 
+gocd_local_bin_directory: '/artifacts'
+guass_local_bin_directory: '/artifacts'
+stattransfer_local_bin_directory: '/artifacts'
+sublime_local_artifact_directory: '/artifacts'
+stata_local_bin_directory: '/artifacts
 #============================#
 ### ELASTICSEARCH SETTINGS ###
 #============================#
