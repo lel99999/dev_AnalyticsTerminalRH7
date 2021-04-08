@@ -33,7 +33,18 @@
       yum:
         name: "@Development tools"
         state: present
-
+    - name: Update R Devtools
+      command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
+      with_items:
+        - sf
+        - units
+        - devtools
+      register: r_add_result
+      failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
+      changed_when: "'Added' in r_result.stdout"
+#      environment: "{{ r_env_vars }}"
+      tags:
+        - r Devtools    
 #   - name: Install JAVA OpenJDK 1.8
 #     shell: yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y
 
