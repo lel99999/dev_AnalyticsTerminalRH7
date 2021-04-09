@@ -87,6 +87,17 @@
       when: iptables_config
 
 ##########################################################  Python Package Updates ##############################################################
+    - name: Install Python dep packages
+      pip:
+        name: "{{ python_dep_packages_mod }}"
+        state: present
+        executable: /opt/rh/python27/root/usr/bin/pip
+##       executable: "{{ python_pip_bin }}"
+#    # when: install_python
+#      tags:
+#        - python-libs
+#        - python2-libs
+ 
     - name: Install Python packages for 27
       pip:
         name: "{{ python_packages }}"
@@ -98,27 +109,17 @@
 #       - python-libs
 #       - python2-libs
 #
-     - name: Install Python packages for 36
-       pip:
-         name: "{{ python3_packages }}"
-         state: present
-         executable: /usr/bin/pip3
-##       executable: "{{ python3_pip_bin }}"
-#    # when: install_python
-#      tags:
-#        - python-libs
-#        - python3-libsp
+    - name: Install Python packages for 36
+      pip:
+        name: "{{ python3_packages }}"
+        state: present
+        executable: /usr/bin/pip3
+##      executable: "{{ python3_pip_bin }}"
+#   # when: install_python
+#     tags:
+#       - python-libs
+#       - python3-libsp
  
-     - name: Install Python dep packages
-       pip:
-         name: "{{ python_dep_packages }}"
-         state: present
-         executable: /opt/rh/python27/root/usr/bin/pip
-##       executable: "{{ python_pip_bin }}"
-#    # when: install_python
-#      tags:
-#        - python-libs
-#        - python2-libs
  
 ##########################################################  Python Package Updates ##############################################################
 
