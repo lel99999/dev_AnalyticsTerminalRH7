@@ -87,16 +87,16 @@
       when: iptables_config
 
 ##########################################################  Python Package Updates ##############################################################
-     - name: Install Python packages for 27
-       pip:
-         name: "{{ python_packages }}"
-         state: present
-         executable: /opt/rh/python27/root/usr/bin/pip
-##       executable: "{{ python_pip_bin }}"
-#    # when: install_python
-#      tags:
-#        - python-libs
-#        - python2-libs
+    - name: Install Python packages for 27
+      pip:
+        name: "{{ python_packages }}"
+        state: present
+        executable: /opt/rh/python27/root/usr/bin/pip
+##      executable: "{{ python_pip_bin }}"
+#   # when: install_python
+#     tags:
+#       - python-libs
+#       - python2-libs
 #
      - name: Install Python packages for 36
        pip:
