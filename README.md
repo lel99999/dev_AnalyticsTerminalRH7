@@ -55,3 +55,26 @@ $ssh -Y <host> QMLSCENE_DEVICE=software rstudio
 #### Updated/Added Packages
 - Postgis25-10*
 - Python27 System Role
+
+
+#### Python 2.7 Pip Error Fix
+Error: <br/>
+```
+$scl enable python27 bash
+$pip
+Traceback (most recent call last):
+  File "/opt/rh/python27/root/usr/bin/pip", line 7, in <module>
+    from pip._internal.cli.main import main
+  File "/opt/rh/python27/root/usr/lib/python2.7/site-packages/pip/_internal/cli/main.py", line 60
+    sys.stderr.write(f"ERROR: {exc}")
+                                   ^
+SyntaxError: invalid syntax
+```
+Fix: <br/>
+```
+$curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py
+$python get-pip.py
+$python -m pip install --upgrade "pip < 21.0"
+```
+
+
