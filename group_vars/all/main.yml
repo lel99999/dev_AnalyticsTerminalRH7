@@ -1070,7 +1070,6 @@ python_packages:
   #- gtksourceview2
   #- gtkunixprint
   #- gpgme # RPMS
-
   #- gudev # RPM
   #- hpmudext # Cups?
   #- hwdata # RPM
@@ -1174,7 +1173,7 @@ python_packages:
 
 python3_packages:
   - Cython
-  - beaker
+# - beaker
   - cairocffi
   - Canvas
   - cracklib
