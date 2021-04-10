@@ -82,6 +82,7 @@ Use yamllint: <br/>
 $brew install yamllint
 $yamllint <yaml_file>
 ```
+![yamllint results](https://github.com/lel99999/dev_AnalyticsTerminalRH7/blob/master/yamllint-01.png) <br/>
 
 [Quickstart](https://yamllint.readthedocs.io/en/stable/quickstart.html) <br/>
 
