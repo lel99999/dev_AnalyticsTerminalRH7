@@ -76,5 +76,12 @@ $curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py
 $python get-pip.py
 $python -m pip install --upgrade "pip < 21.0"
 ```
+#### Addressing YAML Errors:
+Use yamllint: <br/>
+```
+$brew install yamllint
+$yamllint <yaml_file>
+```
 
+[Quickstart](https://yamllint.readthedocs.io/en/stable/quickstart.html) <br/>
 
