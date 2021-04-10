@@ -1173,8 +1173,8 @@ python_packages:
 
 python3_packages:
   - Cython
-  - beaker
   - cairocffi
+  - beaker
   - Canvas
   - cracklib
   - pycrypto #Crypto
