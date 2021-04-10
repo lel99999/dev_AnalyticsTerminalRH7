@@ -1230,3 +1230,125 @@ python3_packages:
   - statsmodels
   - keras
 
+#======================#
+### PACKAGE SETTINGS ###
+#======================#
+postgres_install_dir: /usr/pgsql-10
+postgres_install_repository: True
+postgres_packages:
+  - postgresql10
+  - postgresql10-devel
+  - postgresql10-libs
+  - postgresql10-odbc
+
+postgres_gis_packages:
+  - geos36
+  - postgis24_10
+  - postgis24_10-devel
+  - postgis24_10-utils
+  - postgis24_10-client
+ 
+postgres_old_packages:
+  - postgresql96
+  - postgresql96-libs
+  - postgresql96-devel
+  - postgresql96-contrib
+  - postgresql96-odbc
+  - postgresql96-jdbc
+  - postgresql94
+  - postgresql94-libs
+  - postgresql94-devel
+  - postgresql94-contrib
+  - postgresql94-odbc
+  - postgresql94-jdbc
+  - postgis22
+  - postgis23_95
+  - postgis23_95-devel
+  - postgis23_95-utils
+  - postgis23_95-client
+  - postgis24_96
+  - postgis24_96-devel
+  - postgis24_96-utils
+  - postgis24_96-client
+  - pgdg-redhat96
+  - pgdg-redhat95
+  - pgdg-redhat94
+
+gocd_local_bin_directory: '/artifacts'
+guass_local_bin_directory: '/artifacts'
+stattransfer_local_bin_directory: '/artifacts'
+sublime_local_artifact_directory: '/artifacts'
+stata_local_bin_directory: '/artifacts
+
+#============================#
+### ELASTICSEARCH SETTINGS ###
+#============================#
+es_cluster: enclave_cluster
+es_version: 1.7
+
+# The install command for plugins switched from "-i" to "install"
+es_plugin_install_cmd: "--install"
+es_set_conf_file: True
+
+es_admin_user: deploy
+
+es_log_level: DEBUG
+es_logging_max_files: 10
+
+# This is for installing a collector, not the server
+install_logstash: false
+
+es_heap_size: "6G"
+es_heap_newsize: "2G"
+
+es_endpoint: https://es.cfpb.dev
+es_protocol: https://
+es_hostname: es.cfpb.dev
+es_majority_num: 2
+
+# Shield settings
+es_shield_audit: "true"
+es_shield_enabled: True
+es_message_auth_enabled: True
+
+es_marvel_hostname_verification: "false"
+
+es_plugins:
+  -
+    plugin_name: org.codelibs/elasticsearch-dataformat/1.6.0
+    plugin_path: /usr/share/elasticsearch/plugins/dataformat
+  -
+    plugin_name: elasticsearch/elasticsearch-analysis-phonetic/2.7.0
+    plugin_path: /usr/share/elasticsearch/plugins/analysis-phonetic
+  -
+    plugin_name: elasticsearch/marvel/latest
+    plugin_path: /usr/share/elasticsearch/plugins/marvel
+
+#===================#
+### GOCD SETTINGS ###
+#===================#
+go_server_address: 10.95.74.117
+gocd_agent_package_url: https://download.gocd.io/binaries/16.10.0-4131/rpm/go-agent-16.10.0-4131.noarch.rpm
+gocd_agent_package_name: go-agent-16.10.0-4131.noarch.rpm
+gocd_agent_checksum: "a8b811176dad2f5061e5a94a7929a27919b19018"
+#=========================#
+### PostgreSQL Settings ###
+#=========================#
+
+# Superuser
+pp_superaccount: postgres
+pp_superpassword: password
+
+# PPAS Port
+pp_serverport: 5432
+
+pp_dba_username: deploy
+pp_dba_password: password
+
+### Database Automation packages
+db_automation_custom_packages:
+   - xsv
+   - rhobot
+#  - drake
+#  - hammerdb
+
