@@ -807,105 +807,105 @@ r_packages4:
   - plumber
 
 r_packages_with_opts:
-  -
-    name: udunits2
+  - name: udunits2
     include: /usr/include/udunits2
     lib: /usr/lib64
 
 r_packages_github:
   # - "http://cran.r-project.org/src/contrib/Archive/RQuantLib/RQuantLib_0.3.12.tar.gz" # The latest version requires QuantLib 1.4.0, which is not supported by Centos 6.5
-  - name: rCharts
+  -
+    name: rCharts
     user: ramnathv
-
-  - name: flexdashboard
+  -
+    name: flexdashboard
     user: rstudio
-
-  - name: shinydashboard
+  -
+    name: shinydashboard
     user: rstudio
-
-  - name: shinyjs
+  -
+    name: shinyjs
     user: daattali
-
-  - name: miniUI
+  -
+    name: miniUI
     user: rstudio
-
-  - name: DT
+  -
+    name: DT
     user: rstudio
-
-  - name: rticles
+  -
+    name: rticles
     user: rstudio
-
-  - name: pixiedust
+  -
+    name: pixiedust
     user: nutterb
-
-  - name: DiagrammeR
+  -
+    name: DiagrammeR
     user: rich-iannone
-
-  - name: shinythemes
+  -
+    name: shinythemes
     user: rstudio
-
-  - name: rbokeh
+  -
+    name: rbokeh
     user: bokeh
-
-  - name: highcharter
+  -
+    name: highcharter
     user: jbkunst
-
-  - name: RSQLServer
+  -
+    name: RSQLServer
     user: imanuelcostigan
-
-  - name: htmlwidgets
+  -
+    name: htmlwidgets
     user: sparkline
-
-  - name: streamgraph
+  -
+    name: streamgraph
     user: hrbrmstr
-
-  - name: rthreejs
+  -
+    name: rthreejs
     user: bwlewis
-
-  - name: IRkernel
-    user: IRkernel
-
-  - name: IRdisplay
+  -
     user: IRkernel
-
-  - name: elasticdsl
+    name: IRkernel
+  -
+    user: IRkernel
+    name: IRdisplay
+  -
     user: ropensci
-
-  - name: ggiraph
+    name: elasticdsl
+  -
     user: davidgohel
-
-  - name: ggforce
+    name: ggiraph
+  -
     user: thomasp85
-
-  - name: ggraph
+    name: ggforce
+  -
     user: thomasp85
-
-  - name: gganimate
+    name: ggraph
+  -
     user: dgrtwo
-
-  - name: plotROC
+    name: gganimate
+  -
     user: sachsmc
-
-  - name: wordVectors
+    name: plotROC
+  -
     user: bmschmidt
-
-  - name: tidyjson
+    name: wordVectors
+  -
     user: sailthru
-
-  - name: bookdown
+    name: tidyjson
+  -
     user: rstudio
-
-  - name: twidlr
+    name: bookdown
+  -
     user: drsimonj
-
-  - name: googledrive
+    name: twidlr
+  -
     user: tidyverse
-
-  - name: tensorflow
+    name: googledrive
+  -
     user: rstudio
-
-  - name: blogdown
+    name: tensorflow
+  -
     user: rstudio
+    name: blogdown
 
 r_env_vars:
   CPATH: /usr/include/glpk
@@ -1135,7 +1135,7 @@ python_packages:
   #- setools # RPMs
   #- SimpleDialog # tkinter
   - slip
-  - pysmbclient 
+  - pysmbclient
   #- pysmbc # replaced by pysmbclient
   #- snack # tkinter
   #- sos # RPM
@@ -1173,7 +1173,7 @@ python_packages:
 
 python3_packages:
   - Cython
-  - cairocffi
+  - cairocffi 
   - beaker
   - Canvas
   - cracklib
