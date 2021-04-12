@@ -10,51 +10,6 @@
     install_r_packages: true
     update_rstudio: true
     envir: prod
-  python3_packages:
-    - Cython
-    - beaker
-    - cairocffi
-    - Canvas
-    - cracklib
-    - pycrypto
-    - pycups
-    - pycurl
-    - dateutils
-    - pydbus
-    - decorator
-    - egg
-    - flock
-    - folium
-    - pkgconfig
-    - iniparse
-    - ipython
-    - xmpppy
-    - jinja2
-    - lxml
-    - orca
-    - ORBit
-    - paramiko
-    - pydocs
-    - pyodbc
-    - pysolr
-    - pytz
-    - pyzmq
-    - readline
-    - python-space
-    - pyinsane
-    - numpy
-    - scipy
-    - scikit-learn
-    - slip
-    - svn
-    - theano
-    - tornado
-    - vincent
-    - pyaml
-    - cookiecutter
-    - luigi
-    - statsmodels
-    - keras
 
 # vars_files:
 #   - ~/RHACCOUNT
@@ -157,7 +112,8 @@
 #
     - name: Install Python packages for 36
       pip:
-        name: "{{ python3_packages }}"
+        name: "{{ item }}"
+#       name: "{{ python3_packages }}"
         state: present
         executable: /usr/bin/pip3
 ##      executable: "{{ python3_pip_bin }}"
@@ -165,7 +121,51 @@
 #     tags:
 #       - python-libs
 #       - python3-libsp
- 
+      with_items:
+        - Cython
+        - beaker
+        - cairocffi
+        - Canvas
+        - cracklib
+        - pycrypto
+        - pycups
+        - pycurl
+        - dateutils
+        - pydbus
+        - decorator
+        - egg
+        - flock
+        - folium
+        - pkgconfig
+        - iniparse
+        - ipython
+        - xmpppy
+        - jinja2
+        - lxml
+        - orca
+        - ORBit
+        - paramiko
+        - pydocs
+        - pyodbc
+        - pysolr
+        - pytz
+        - pyzmq
+        - readline
+        - python-space
+        - pyinsane
+        - numpy
+        - scipy
+        - scikit-learn
+        - slip
+        - svn
+        - theano
+        - tornado
+        - vincent
+        - pyaml
+        - cookiecutter
+        - luigi
+        - statsmodels
+        - keras 
  
 ##########################################################  Python Package Updates ##############################################################
 
