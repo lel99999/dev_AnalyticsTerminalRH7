@@ -137,9 +137,9 @@
 #       - python-libs
 #       - python3-libsp
       with_items:
-        - ['Cython','beaker','cairocffi','Canvas','cracklib','pcrypto','pycurl','dateutils','pydbus','decorator','egg','flock','folium','pkgconfig','iniparse','ipython','xmpppy']
+        - ['Cython','beaker','cairocffi','Canvas','cracklib','pycrypto','pycurl','dateutils','pydbus','decorator','egg','flock','folium','pkgconfig','iniparse','ipython','xmpppy']
 # Remove pycups
-#       - ['Cython','beaker','cairocffi','Canvas','cracklib','pcrypto','pycups','pycurl','dateutils','pydbus','decorator','egg','flock','folium','pkgconfig','iniparse','ipython','xmpppy']
+#       - ['Cython','beaker','cairocffi','Canvas','cracklib','pycrypto','pycups','pycurl','dateutils','pydbus','decorator','egg','flock','folium','pkgconfig','iniparse','ipython','xmpppy']
         - ['jinja2','lxml','orca','ORBit','paramiko','pydocs','pyodbc','pysolr','pytz','pyzmq','readline','python-space','pyinsane','numpy','scipy','scikit-learn','slip','svn','theano',]
         - ['tornado','vincent','pyaml','cookiecutter','luigi','statsmodels','keras']
 #      loop:
