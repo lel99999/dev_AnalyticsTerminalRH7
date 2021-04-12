@@ -813,7 +813,7 @@ r_packages_with_opts:
     lib: /usr/lib64
 
 r_packages_github:
-  # - "http://cran.r-project.org/src/contrib/Archive/RQuantLib/RQuantLib_0.3.12.tar.gz" # The latest version requires QuantLib 1.4.0, which is not supported by Centos 6.5
+### - "http://cran.r-project.org/src/contrib/Archive/RQuantLib/RQuantLib_0.3.12.tar.gz" # The latest version requires QuantLib 1.4.0, which is not supported by Centos 6.5
   -
     name: rCharts
     user: ramnathv
