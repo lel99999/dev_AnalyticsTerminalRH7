@@ -661,16 +661,16 @@ r_packages1:
   - AMORE
   - arm
   # - AtelieR # Need X11
-  - BACCO
+  # - BACCO  ## Error 
   - base
   - bayesm # C++11 required
   - benchden
-  - bgmm
+  # - bgmm  ## Error
   - bitops
   - boa
   - boot
   - brnn
-  - car
+  # - car  ## Error
   - caret
   - caTools
   - class
@@ -680,7 +680,7 @@ r_packages1:
   - codetools
   - colorspace
   - compiler
-  - copula
+  # - copula ## Error
   - corpora
   - CRM
   - ctv
@@ -720,7 +720,7 @@ r_packages1:
   - forecast # C++11 required
   - foreign
   - frbs
-  - FrF2
+  # - FrF2  ## Error
   - fts
   - fugeR
   - GA
@@ -740,13 +740,13 @@ r_packages1:
   - grid
   - Grid2Polygons
   - grnn
-  - gsl
+  # - gsl  ## Error
   - gstat
   - gtable
   - HadoopStreaming
   - hamlet
   - HistogramTools
-  - hive
+  # - hive  ## Error
   - Hmisc
   - httpuv
   - httr
@@ -765,7 +765,7 @@ r_packages1:
   - lattice
   - leafletR
   - LearnBayes
-  - lme4
+  # - lme4  ## Error
   - lsa
   - lubridate
 
