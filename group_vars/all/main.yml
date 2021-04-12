@@ -298,8 +298,8 @@ python_dep_packages_mod:
   - gnome-packagekit
   - gpgme
   - gpgme-devel
-  - gtk+
-  - gtk+-devel
+  # - gtk+  # Error generated
+  # - gtk+-devel
   - hdf5
   - hdf5-devel
   - ipa-python
