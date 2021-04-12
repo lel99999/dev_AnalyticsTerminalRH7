@@ -96,16 +96,16 @@
       when: iptables_config
 
 ##########################################################  Python Package Updates ##############################################################
-    - name: Install Python dep packages
+### - name: Install Python dep packages
 #   - name: SCL Enable Pip Install 
 #     shell: |
 #       scl enable python27 -- pip install "{{ python_dep_packages_mod }}" 
 #     become: yes
 #     become_method: sudo
-      pip:
-        name: "{{ python_dep_packages_mod }}"
-        state: present
-        executable: /usr/local/bin/pip
+###   pip:
+###     name: "{{ python_dep_packages_mod }}"
+###     state: present
+###     executable: /usr/local/bin/pip
 ##      executable: /opt/rh/python27/root/usr/bin/pip
 ##       executable: "{{ python_pip_bin }}"
 #    # when: install_python
@@ -113,11 +113,11 @@
 #        - python-libs
 #        - python2-libs
  
-    - name: Install Python packages for 27
-      pip:
-        name: "{{ python_packages }}"
-        state: present
-        executable: /usr/local/bin/pip
+### - name: Install Python packages for 27
+###   pip:
+###     name: "{{ python_packages }}"
+###     state: present
+###     executable: /usr/local/bin/pip
 ##      executable: /opt/rh/python27/root/usr/bin/pip
 ##      executable: "{{ python_pip_bin }}"
 #   # when: install_python
