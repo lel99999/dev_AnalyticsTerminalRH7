@@ -35,6 +35,14 @@
         name: "@Development tools"
         state: present
 
+    - name: Install R Udunits Dependencies
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - udunits2
+        - udunits2-devel
+
     - name: Update R Devtools
       command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
       with_items:
