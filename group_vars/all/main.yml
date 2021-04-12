@@ -281,7 +281,7 @@ java_home_path: /etc/alternatives/jre
 #======================#
 python_dep_packages_mod:
   - atlas
-  - atlas-devel
+  # - atlas-devel # Error - no matching distribution
   - bzip2
   - bzip2-devel
   - cracklib
