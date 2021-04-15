@@ -41,7 +41,7 @@
 
 - name: SCL Enable Pip Install Upgrade Pip 
   shell: |
-    scl enable python27 -- pip install --upgrade pip
+    scl enable python27 -- pip install --upgrade "pip < 21.0"
 #   scl enable python27 bash 
 #   pip install --upgrade pip
   become: yes
