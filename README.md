@@ -86,3 +86,8 @@ $yamllint <yaml_file>
 
 [Quickstart](https://yamllint.readthedocs.io/en/stable/quickstart.html) <br/>
 
+#### Google Chrome Update
+To access: <br/>
+`$ssh -Y <hostname> /usr/bin/google-chrome` <br/>
+
+
