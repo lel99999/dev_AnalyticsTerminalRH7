@@ -73,6 +73,30 @@
   tags:
     - eod
 
+- name: Add LowResMonitor Configuration
+  template:
+    src: LowResMonitor.cfg
+    dest: "{{ eod_install_directory }}/conf/admin/Xconfig/LowResMonitor.cfg"
+# notify:
+#   - restart eod
+#   - restart gdm
+#   - restart prefdm
+# when: custom_repo
+  tags:
+    - eod
+
+- name: Add HiResMonitor Configuration
+  template:
+    src: HiResMonitor.cfg
+    dest: "{{ eod_install_directory }}/conf/admin/Xconfig/HiResMonitor.cfg"
+# notify:
+#   - restart eod
+#   - restart gdm
+#   - restart prefdm
+# when: custom_repo
+  tags:
+    - eod
+
 - name: Configure EOD license file
   template:
     src: akeys
@@ -173,6 +197,19 @@
   register: xfce4desktop
   tags:
     - eod
+
+- name: Add Xfce4 Xstart
+  template:
+    src: HiResMonitor.cfg
+    dest: "{{ eod_install_directory }}/conf/admin/Xstart/xfce4.xs"
+  notify:
+#   - restart eod
+#   - restart gdm
+#   - restart prefdm
+  when: custom_repo
+  tags:
+    - eod
+
 #- debug: var="{{ xfce4desktop.stdout }}"
 - name: update libraries for MATE installation
   command: yum -y update --enablerepo=epel-testing
@@ -478,19 +515,3 @@
 #  when: custom_repo
 #  tags:
 #    - eod
-
-- name: Add Xconfig files for LowRes and HiRes
-  copy:
-    src: Xconfig/
-    dest: /usr/local/eod/conf/admin/Xconfig
-    owner: root
-    group: root
-    mode: 0755
-
-- name: Add Xstart files for xfce4.xs
-  copy:
-    src: Xstart/
-    dest: /usr/local/eod/conf/admin/Xstart
-    owner: root
-    group: root
-    mode: 0755
