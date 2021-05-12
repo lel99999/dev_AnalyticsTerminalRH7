@@ -73,6 +73,30 @@
   tags:
     - eod
 
+- name: Add LoResMonitor config
+  template:
+    src: LowResMonitor.cfg
+    dest: "{{ eod_install_directory }}/conf/admin/Xconfig/LowResMonitor.cfg"
+  notify:
+#   - restart eod
+#   - restart gdm
+#   - restart prefdm
+  when: custom_repo
+  tags:
+    - eod
+
+- name: Add HiResMonitor config
+  template:
+    src: HiResMonitor.cfg
+    dest: "{{ eod_install_directory }}/conf/admin/Xconfig/HiResMonitor.cfg"
+  notify:
+#   - restart eod
+#   - restart gdm
+#   - restart prefdm
+  when: custom_repo
+  tags:
+    - eod
+
 - name: Add LowResMonitor Configuration
   template:
     src: LowResMonitor.cfg
@@ -200,7 +224,7 @@
 
 - name: Add Xfce4 Xstart
   template:
-    src: HiResMonitor.cfg
+    src: xfce4.xs
     dest: "{{ eod_install_directory }}/conf/admin/Xstart/xfce4.xs"
   notify:
 #   - restart eod
