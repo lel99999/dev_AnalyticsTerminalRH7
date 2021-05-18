@@ -43,7 +43,7 @@ Add following in /etc/ansible/hosts <ip> <hostname> ansible_ssh_pass=vagrant ans
 #### Shiny Server Issues
 - [Shiny Server Service Issue](https://github.com/rstudio/shiny-server/issues/316)
 
-#### Launch RStudio
+#### Launch RStudio with Flag
 ```
 $ssh -Y <host> QMLSCENE_DEVICE=software rstudio
 ```
@@ -91,3 +91,4 @@ To access: <br/>
 `$ssh -Y <hostname> /usr/bin/google-chrome` <br/>
 
 #### Notebook Package not installed for SCL Python3.6, R ODBC Package not included in large R Deployment
+
