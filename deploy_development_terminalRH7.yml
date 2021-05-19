@@ -43,6 +43,7 @@
 #   - epel7
     - common7
     - eod7
+    - jupyterRH7
 
 # Install development packages
 - hosts: analytics_terminal
