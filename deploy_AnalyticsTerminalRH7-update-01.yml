@@ -61,6 +61,19 @@
         name: firefox
         state: absent
 
+    - name: Add rJava and Dependencies
+      yum:
+        name: java-1.8.0-openjdk-devel
+
+    - name: Run R Java Config
+      shell: R CD javareconf
+    
+    - name: Add RSQLServer Package
+      command: /usr/bin/Rscript --slave --no-save --no-restore-history -e "if (! ('{{ item }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item }}', INSTALL_opts=c('--no-test-load'),repos=c('http://cran.rstudio.com/'),dep=TRUE); print('Added'); } else { print('Already installed'); }"
+      with_items:
+        - rJava
+        - RSQLServer
+
 #   - name: Install JAVA OpenJDK 1.8
 #     shell: yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y
 
