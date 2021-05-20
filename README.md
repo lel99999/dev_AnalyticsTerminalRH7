@@ -92,3 +92,23 @@ To access: <br/>
 
 #### Notebook Package not installed for SCL Python3.6, R ODBC Package not included in large R Deployment
 
+#### Update JAVA for rJAVA
+```
+$sudo yum install java-1.8.0-openjdk-devel
+$sudo R CMD javareonf
+```
+
+#### Install rJAVA in R
+```
+>install.package("rJava")
+```
+
+#### Install RSQLServer DEV or STABLE through github or CRAN
+```
+# GITHUB
+>install.packages('devtools')
+>devtools::install_github('imanuelcostigan/RSQLServer')
+
+# CRAN
+>install.packages("RSQLServer")
+```
