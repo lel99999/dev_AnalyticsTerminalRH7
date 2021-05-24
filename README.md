@@ -112,3 +112,11 @@ $sudo R CMD javareonf
 # CRAN
 >install.packages("RSQLServer")
 ```
+
+#### MS ODBC Drivers for RHEL Linux
+`ODBC Driver for v11.0 - libmsodbcsql-11.0.so.2270.0` <br/>
+
+##### Add Linux Repo
+```
+$sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+```
