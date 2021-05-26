@@ -112,3 +112,8 @@ $sudo R CMD javareonf
 # CRAN
 >install.packages("RSQLServer")
 ```
+
+#### Find what YUM packages includes a file
+```
+$sudo yum whatprovides "filename"
+```
