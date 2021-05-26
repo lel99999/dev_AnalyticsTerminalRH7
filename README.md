@@ -113,7 +113,18 @@ $sudo R CMD javareonf
 >install.packages("RSQLServer")
 ```
 
+<<<<<<< HEAD
 #### Find what YUM packages includes a file
 ```
 $sudo yum whatprovides "filename"
+=======
+#### MS ODBC Drivers for RHEL Linux
+`ODBC Driver for v11.0 - libmsodbcsql-11.0.so.2270.0` <br/>
+
+##### Add Linux Repo RHEL 7
+[https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) <br/>
+
+```
+$sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+>>>>>>> f6fc61b0be2c4e0d76988520bd9ce602ca4b0176
 ```
