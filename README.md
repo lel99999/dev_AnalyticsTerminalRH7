@@ -17,6 +17,7 @@ Development of Analytics Terminal for RHEL 7
 - pycharm
 - pyenvRH7
 - python-libs
+- python27RH7-System ## Added to address 2.7 EOL
 - python2RH7
 - python3RH7
 - r-shiny-configRH7
