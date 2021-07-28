@@ -129,3 +129,7 @@ $sudo yum whatprovides "filename"
 $sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 >>>>>>> f6fc61b0be2c4e0d76988520bd9ce602ca4b0176
 ```
+  
+  #### Install RPostgreSQL Notes
+  - Requires installation of postgresql-libs and postgresql-devel
+  
