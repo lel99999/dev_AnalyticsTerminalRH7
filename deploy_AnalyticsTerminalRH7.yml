@@ -41,8 +41,8 @@
 #   - {role: iptables, when: "iptables_config"}
 #    - {role: common, when: "install_glusterfs"}
 
-- include: deploy_development_terminalRH7.yml
-- include: deploy_r_terminalRH7.yml
+#- include: deploy_development_terminalRH7.yml
+#- include: deploy_r_terminalRH7.yml
 
 - hosts: analytics_terminal7
   become: yes
@@ -56,7 +56,7 @@
 ##  - r-shinyRH7
 ##  - r-shiny-configRH7
 ##  - r-studio-desktopRH7
-### - eod7
+    - eod7
 
   post_tasks:
     - name: Open port range for app prototyping
