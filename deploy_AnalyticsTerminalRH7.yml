@@ -57,8 +57,8 @@
 ##  - r-studio-desktopRH7
     - r-studio-serverRH7
 #   - r-studio-server-configRH7
-    - r-shinyRH7
-    - r-shiny-configRH7
+#   - r-shinyRH7
+#   - r-shiny-configRH7
 ### - eod7
 
   post_tasks:
