@@ -8,6 +8,7 @@
     deploy_iptables: true
     envir: prod
     update_rstudio: false
+    install_pro_drivers: false
 # vars_files:
 #   - ~/RHACCOUNT
   become: yes
