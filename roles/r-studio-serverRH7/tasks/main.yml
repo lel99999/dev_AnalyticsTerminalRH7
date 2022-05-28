@@ -33,7 +33,7 @@
     update_cache: yes
     disable_gpg_check: yes
     validate_certs: no
-  when: update_rstudio
+# when: update_rstudio
   tags:
     - rstudio-server
 
@@ -45,7 +45,7 @@
 
 - name: Take server online
   command: "rstudio-server online"
-  when: update_rstudio
+# when: update_rstudio
   tags:
     - rstudio-server
 
