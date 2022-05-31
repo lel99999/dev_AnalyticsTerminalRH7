@@ -64,11 +64,12 @@
   file:
     dest: /etc/init
     state: directory
-  when: envir == "dev.local"
+# when: envir == "dev.local"
 
 - name: Install shiny-server upstart script
   template:
     src: shiny-server.conf.j2
+#   dest: /etc/shiny-server/shiny-server.conf
     dest: /etc/init/shiny-server.conf
   notify:
       - restart shiny-server
