@@ -54,9 +54,12 @@
 #   - {role: log-courier, when: "install_logstash"}
 ##  - devtools7
 ##  - r_RH7
-    - r-studio2022-desktopRH7
-    - r-studio2022-serverRH7
-    - r-studio2022-server-configRH7
+    - r-studio-desktopRH7
+    - r-studio-serverRH7
+    - r-studio-server-configRH7
+##  - r-studio2022-desktopRH7
+##  - r-studio2022-serverRH7
+##  - r-studio2022-server-configRH7
 ### - r-shinyRH7
 ### - r-shiny-configRH7
 ##  - eod7
